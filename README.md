@@ -28,8 +28,19 @@ Aplikasi manajemen keuangan pribadi yang dirancang untuk membantu pengguna dalam
 Clone atau unduh proyek ini ke komputer Anda terlebih dahulu.
 
 ### 2. Setup Database
-1. Buat database baru di MySQL.
-2. Impor file `.sql` (jika tersedia) atau buat tabel yang diperlukan (`User`, `Kategori`, `Budget`, `Transaksi`).
+
+1. Buat database baru bernama `db_finance` di MySQL Anda.
+2. Impor file `database.sql` yang sudah tersedia di repositori ini ke dalam database Anda.
+3. Jika ingin membuat tabel secara manual, berikut adalah struktur skema database yang digunakan:
+
+```sql
+-- Struktur Ringkas Tabel Utama
+CREATE TABLE users (...);
+CREATE TABLE kategori (...);
+CREATE TABLE transaksi (...);
+CREATE TABLE budget (...);
+CREATE TABLE activity_log (...);
+```
 
 ### 3. Konfigurasi Koneksi
 Sesuaikan file `Koneksi.java` dengan kredensial database Anda (nama database, *username*, dan *password*).
